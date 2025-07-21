@@ -1,12 +1,14 @@
 class UsersController < ApplicationController
   before_action :load_user, only: [:show]
 
+  # GET /signup
   def new
     @user = User.new
   end
 
   def show; end
 
+  # POST /create
   def create
     @user = User.new(user_params)
     if @user.save
@@ -21,9 +23,11 @@ class UsersController < ApplicationController
     params.require(:user).permit(User::USER_PERMIT)
   end
 
-  def handle_success user
+  def handle_success _user
+    reset_session
+    log_in @user
     flash[:success] = t(".create_success")
-    redirect_to user
+    redirect_to @user
   end
 
   def handle_failure _user
@@ -32,7 +36,7 @@ class UsersController < ApplicationController
   end
 
   def load_user
-    @user = User.find_by(params[:id])
+    @user = User.find_by(id: params[:id])
     return if @user
 
     flash[:warning] = t(".error.not_found")

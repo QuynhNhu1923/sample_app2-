@@ -1,0 +1,13 @@
+en: 
+  sessions:
+    new:
+      title: "Log in"
+      subtitle: "Please enter your credentials to log in."
+      signup: "Sign up now!"
+      login: "Log in"
+    create:
+      success: "Successfully logged in!"
+      failure: "Invalid email or password. Please try again."
+    destroy:
+      success: "Successfully logged out!"
+      failure: "There was an issue logging you out. Please try again."

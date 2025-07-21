@@ -2,3 +2,6 @@ vi:
   flash:
     logged_in: "Bạn đã đăng nhập thành công."
     logged_out: "Bạn đã đăng xuất."
+    signup_success: "Chào mừng bạn tới Sample App - Tài khoản của bạn đã được tạo thành công."
+    signup_failure: "Đã có lỗi xảy ra khi tạo tài khoản của bạn. Vui lòng thử lại."
+    danger: "Kết hợp email/mật khẩu không hợp lệ"

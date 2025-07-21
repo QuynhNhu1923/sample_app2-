@@ -2,12 +2,28 @@
     <div class="container">
     <%= link_to t("layout.sample_app"), root_path, id: "logo" %>
     <nav>
-        <ul class="nav navbar-nav navbar-right">
-            <li><%= link_to t("layouts.home"), root_path %></li>
-            <li><%= link_to t("layouts.help"), help_path %></li>
-            <li><%= link_to t("layouts.login"), "#" %></li>
-            <li><%= link_to t("layouts.change_language"), "#" %></li>
-        </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li> <%= link_to t("layout.home"), root_path %> </li>
+        <li> <%= link_to t("layout.help"), help_path %> </li>
+        <% if logged_in? %>
+          <li> <%= link_to t("layout.users"), '#' %> </li>
+          <li class="dropdown">
+            <%= link_to "#", id: "account", class: "dropdown-toggle" do %>
+              <%= t(".account") %> <b class="caret"></b>
+            <% end %>
+            <ul id="dropdown-menu" class="dropdown-menu">
+              <li> <%= link_to t("layout.profile"), current_user %> </li>
+              <li> <%= link_to t("layout.settings"), '#' %> </li>
+              <li class="divider"></li>
+              <li>
+                <%= link_to t("layout.logout"), logout_path, data: { "turbo-method": :delete } %>
+              </li>
+            </ul>
+          </li>
+        <% else %>
+          <li> <%= link_to t("layout.login"), login_path %> </li>
+        <% end %>
+      </ul>
     </nav>
-    </div>
+  </div>
 </header>
