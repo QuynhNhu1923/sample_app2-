@@ -1,33 +1,63 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t "hello"
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t("hello") %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   "true": "foo"
-#
-# To learn more, please read the Rails Internationalization guide
-# available at https://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+
+  static_pages:
+
+    home_page:
+      title: "Home"
+      welcome: "Welcome to the Sample App"
+      hello_user: "Hello %{user_name}!" 
+      signup_now: "Sign up now!"
+      home_content_part1: "This is the home page for the"
+      home_content_part2: "sample application."
+    
+    help_page:
+      title: "Help"
+      heading: "Help"
+      content_part1: "Get help on the Ruby on Rails Tutorial at the"
+      content_part2: "Rails Tutorial help page."
+      content_part3: "To get help on this sample app, see the"
+      content_part4: "Ruby on Rails Tutorial book."
+    
+    about_page:
+      title: "About"
+      heading: "About"
+      content_part1: "The"
+      content_part2: "part of the"
+      content_part3: "Learn Enough family of tutorials"
+      content_part4: ", is a book and"
+      content_part5: "screencast series"
+      content_part6: "to teach web development with"
+      content_part7: "This is the sample app for the tutorial."
+    
+    contact_page:
+      title: "Contact"
+      heading: "Contact"
+      content_part1: "Contact the Ruby on Rails Tutorial about the sample app at the"
+      content_part2: "contact page."
+
+  microposts:
+    index:
+      title: "All Microposts"
+      no_microposts: "No microposts found."
+
+  layout:
+    sample_app: "sample app"
+    home: "Home"
+    help: "Help"
+    login: "Log in"
+    about: "About"
+    contact: "Contact"
+    news: "News"
+    change_language: "Change Language"
+
+  footer:
+    by: "by"
+    the: "The"
+    
+  user:
+    profile: "Profile"
+    settings: "Settings"
+    logout: "Log out"
+    login: "Log in"
+    signup: "Sign up"
+    signup_description: "This will be a signup page for new users."
