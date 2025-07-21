@@ -9,10 +9,11 @@ Rails.application.routes.draw do
     get "/contact", to: "static_pages#contact"
     get "/signup", to: "users#new"
     get "login", to: "sessions#new"
-    post "login", to: "sessions#create"
-    delete "logout", to: "sessions#destroy"
     get "/home", to: "static_pages#home"
     
     post "/signup", to: "users#create"
+    post "login", to: "sessions#create"
+
+    delete "logout", to: "sessions#destroy"
   end
 end

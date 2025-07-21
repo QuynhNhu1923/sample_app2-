@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :logged_in_user, only: [:show]
   before_action :load_user, only: [:show]
 
   # GET /signup
@@ -6,6 +7,7 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
+  # POST /signup
   def show; end
 
   # POST /create
