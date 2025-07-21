@@ -34,7 +34,11 @@
 
 # Ignore db test files.
 db/test.*
+/test/test_helper.rb
+
 
 config/settings.local.yml
 config/settings/*.local.yml
 config/environments/*.local.yml
+
+config/application.yml

@@ -5,9 +5,11 @@ en:
       subtitle: "Please enter your credentials to log in."
       signup: "Sign up now!"
       login: "Log in"
+      remember_me: "Remember me on this computer"
     create:
       success: "Successfully logged in!"
       failure: "Invalid email or password. Please try again."
+      already_logged_in: "You are logged in."
     destroy:
       success: "Successfully logged out!"
       failure: "There was an issue logging you out. Please try again."

@@ -1,5 +1,6 @@
 class SessionsController < ApplicationController
   # POST /login
+  before_action :redirect_if_logged_in, only: [:new, :create]
   before_action :find_user, only: [:create]
 
   # GET /login
@@ -28,6 +29,13 @@ class SessionsController < ApplicationController
 
   def authenticate_user user
     user&.authenticate(params.dig(:session, :password))
+  end
+
+  def redirect_if_logged_in
+    return unless logged_in?
+
+    flash[:info] = t(".already_logged_in")
+    redirect_to current_user
   end
 
   def handle_success user
