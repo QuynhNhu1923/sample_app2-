@@ -1,5 +1,7 @@
 vi:
   activerecord:
+    models:
+      user: "Người dùng"
     errors:
       models:
         user:

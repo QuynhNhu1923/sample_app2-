@@ -18,7 +18,12 @@ rails_book_url: "https://www.railstutorial.org/book"
 rails_contact_url: "https://www.railstutorial.org/contact"
 learn_enough_url: "https://www.learnenough.com/"
 rails_screencast_url: "https://screencasts.railstutorial.org/"
-
+base_avatar_url: "https://www.gravatar.com/avatar"
+gravatar_base_url: "https://secure.gravatar.com/avatar"
+genders:
+  - male
+  - female
+  - other
 
 development:
 <<: *defaults

@@ -8,13 +8,13 @@
         <%= @user.name %>
       </h1>
       <p>
-        <strong>Email:</strong> <%= @user.email %>
+        <strong><%= t(".email") %>:</strong> <%= @user.email %>
       </p>
       <p>
-        <strong>Created At:</strong> <%= @user.created_at.strftime("%Y-%m-%d %H:%M:%S") %>
+        <strong><%= t(".create_at") %>:</strong> <%= l(@user.created_at) %>
       </p>
       <p>
-        <strong>Updated At:</strong> <%= @user.updated_at.strftime("%Y-%m-%d %H:%M:%S") %>
+        <strong><%= t(".update_at") %>:</strong> <%= l(@user.updated_at) %>
       </p>
     </section>
   </aside>

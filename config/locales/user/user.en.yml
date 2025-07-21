@@ -1,8 +1,27 @@
 en:  
-  user:
+  users:
     profile: "Profile"
+    email: "Email"
+    genders:
+      male: "Male"
+      female: "Female"
+      other: "Other"
+    create_at: "Created At"
+    update_at: "Updated At"
     settings: "Settings"
     logout: "Log out"
     login: "Log in"
     signup: "Sign up"
+    new:
+      create_account: "Create my account"
+      create_success: "Created successfully - Welcome to the Sample App"
+      create_failed: "Failed to create your account."
+      log_error: "User errors:"
+    error:
+      not_found: "User not found"
+    confirm_password: "Confirm password"
     signup_description: "This will be a signup page for new users."
+    genders:
+      male: "Male"
+      female: "Female"
+      other: "Other"

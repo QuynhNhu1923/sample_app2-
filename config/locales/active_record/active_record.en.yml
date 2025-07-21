@@ -1,5 +1,7 @@
 en:
   activerecord:
+    model:
+      user: "User"
     errors:
       models:
         user: # Tên model (viết thường, số ít)

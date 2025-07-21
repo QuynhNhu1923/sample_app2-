@@ -1,8 +1,27 @@
-vi:
-  user:
+vi:  
+  users:
     profile: "Hồ sơ"
+    email: "Email"
+    genders:
+      male: "Nam"
+      female: "Nữ"
+      other: "Khác"
+    create_at: "Được tạo lúc"
+    update_at: "Cập nhật lúc"
     settings: "Cài đặt"
     logout: "Đăng xuất"
     login: "Đăng nhập"
     signup: "Đăng ký"
-    signup_description: "Đây sẽ là trang đăng ký cho người dùng mới."
+    new:
+      create_account: "Tạo tài khoản của tôi"
+      create_success: "Tạo thành công - Chào mừng bạn đến với Ứng dụng Mẫu"
+      create_failed: "Tạo tài khoản không thành công."
+      log_error: "Lỗi người dùng:"
+    error:
+      not_found: "Không tìm thấy người dùng"
+    confirm_password: "Xác nhận mật khẩu"
+    signup_description: "Đây là trang đăng ký cho người dùng mới."
+    genders:
+      male: "Nam"
+      female: "Nữ"
+      other: "Khác"
