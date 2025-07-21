@@ -5,3 +5,4 @@ en:
     signup_success: "Welcome to the Sample App! Your account has been created successfully."
     signup_failure: "There was an error creating your account. Please try again."
     danger: "Invalid email/password combination"
+    error_login : "Please log in."

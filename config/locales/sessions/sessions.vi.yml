@@ -5,6 +5,7 @@ vi:
       subtitle: "Vui lòng nhập thông tin xác thực của bạn để đăng nhập."
       signup: "Đăng ký ngay!"
       login: "Đăng nhập"
+      remember_me: "Ghi nhớ tôi trên máy tính này"
     create:
       success: "Đăng nhập thành công!"
       failure: "Email hoặc mật khẩu không hợp lệ. Vui lòng thử lại."
