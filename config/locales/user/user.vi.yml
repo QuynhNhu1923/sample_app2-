@@ -19,9 +19,8 @@ vi:
       log_error: "Lỗi người dùng:"
     error:
       not_found: "Không tìm thấy người dùng"
+      not_correct_user: "Bạn không thể chỉnh sửa tài khoản này."
+      please_login: "Vui lòng đăng nhập."
     confirm_password: "Xác nhận mật khẩu"
     signup_description: "Đây là trang đăng ký cho người dùng mới."
-    genders:
-      male: "Nam"
-      female: "Nữ"
-      other: "Khác"
+

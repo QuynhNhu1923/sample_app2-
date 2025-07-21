@@ -25,7 +25,8 @@ class User < ApplicationRecord
                     uniqueness: true
   # Validate that password is present and has at least
   #                     MIN_PASSWORD_LENGTH characters
-  validates :password, presence: true, length: {minimum: MIN_PASSWORD_LENGTH}
+  validates :password, presence: true, length: {minimum: MIN_PASSWORD_LENGTH},
+allow_nil: true
   # Validate that gender is present and included in the list of valid genders
   validates :gender, presence: true, inclusion: {in: Settings.genders}
   # Validate that birthday is present

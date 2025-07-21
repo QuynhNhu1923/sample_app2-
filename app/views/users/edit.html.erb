@@ -1,0 +1,16 @@
+<% provide(:title, t(".title_edit")) %>
+
+<h1><%= t(".title_update") %></h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <% provide(:button_text, t(".update_button")) %>
+    <%= render "form" %>
+
+  <div class="gravatar_edit">
+    <%= gravatar_for @user %>
+    <a href="<%= Settings.gravatar_email_url %>" target="_blank"><%= t(".gravatar_change") %></a>
+  </div>
+
+  </div>
+</div>
