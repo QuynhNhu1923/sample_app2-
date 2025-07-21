@@ -1,0 +1,8 @@
+en:  
+  user:
+    profile: "Profile"
+    settings: "Settings"
+    logout: "Log out"
+    login: "Log in"
+    signup: "Sign up"
+    signup_description: "This will be a signup page for new users."

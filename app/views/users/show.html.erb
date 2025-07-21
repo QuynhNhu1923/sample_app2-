@@ -1,0 +1,21 @@
+<%# app/views/users/show.html.erb %>
+<% provide(:title, @user.name) %>
+<div class="row">
+  <aside class="col-md-4">
+    <section class="user_info">
+      <h1>
+        <%= gravatar_for @user %>
+        <%= @user.name %>
+      </h1>
+      <p>
+        <strong>Email:</strong> <%= @user.email %>
+      </p>
+      <p>
+        <strong>Created At:</strong> <%= @user.created_at.strftime("%Y-%m-%d %H:%M:%S") %>
+      </p>
+      <p>
+        <strong>Updated At:</strong> <%= @user.updated_at.strftime("%Y-%m-%d %H:%M:%S") %>
+      </p>
+    </section>
+  </aside>
+</div>

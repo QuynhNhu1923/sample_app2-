@@ -1,0 +1,13 @@
+en:
+  layout:
+    sample_app: "sample app"
+    home: "Home"
+    help: "Help"
+    login: "Log in"
+    about: "About"
+    contact: "Contact"
+    news: "News"
+    change_language: "Change Language"
+  footer:
+    by: "by"
+    the: "The sample app"

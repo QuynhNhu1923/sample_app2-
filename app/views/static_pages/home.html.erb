@@ -1,19 +1,19 @@
-<% provide(:title, t("static_pages.home_page.title")) %>
-<h1><%= t("static_pages.home_page.welcome") %> - <%= Settings.app_name %></h1>
+<% provide(:title, t(".title")) %>
+<h1><%= t(".welcome") %> - <%= Settings.app_name %></h1>
 <p>
-    <%= t("static_pages.home_page.home_content_part1") %>
+    <%= t(".home_content_part1") %>
     <%= link_to Settings.rails_tutorial_text, Settings.rails_tutorial_url %>
-    <%= t("static_pages.home_page.home_content_part2") %>
+    <%= t(".home_content_part2") %>
 </p>
 <div class="center jumbotron">
-  <h1><%= t("static_pages.home_page.welcome") %></h1>
+  <h1><%= t(".welcome") %></h1>
   <h2>
-    <%= t("static_pages.home_page.hello_user", user_name: Settings.user_name) %>
-    <%= t("static_pages.home_page.home_content_part1") %>
+    <%= t(".hello_user", user_name: Settings.user_name) %>
+    <%= t(".home_content_part1") %>
     <%= link_to Settings.rails_tutorial_text, Settings.rails_tutorial_url %>
-    <%= t("static_pages.home_page.home_content_part2") %>
+    <%= t(".home_content_part2") %>
   </h2>
-  <%= link_to t("home_page.signup_now"), signup_path, class: "btn btn-lg btn-primary" %>
+  <%= link_to t(".signup_now"), signup_path, class: "btn btn-lg btn-primary" %>
 </div>
 <%= link_to image_tag("rails.svg", alt: Settings.rails_logo_alt, width: Settings.rails_logo_width),
             Settings.rails_official_url %>

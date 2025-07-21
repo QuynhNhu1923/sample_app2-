@@ -1,5 +1,5 @@
-<% provide(:title, t("microposts.index.title")) %>
-<h1><%= t("microposts.index.title") %></h1>
+<% provide(:title, t(".title")) %>
+<h1><%= t(".title") %></h1>
 
 <% if @microposts.any? %>
     <ul>
@@ -8,5 +8,5 @@
     <% end %>
     </ul>
 <% else %>
-    <p><%= t("microposts.index.no_microposts") %></p>
+    <p><%= t(".no_microposts") %></p>
 <% end %>
