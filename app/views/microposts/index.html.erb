@@ -1,0 +1,12 @@
+<% provide(:title, "All Microposts") %>
+<h1>All Microposts</h1>
+
+<% if @microposts.any? %>
+    <ul>
+    <% @microposts.each do |micropost| %>
+        <li><%= micropost.content %></li>
+    <% end %>
+    </ul>
+<% else %>
+    <p>No microposts yet.</p>
+<% end %>

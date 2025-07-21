@@ -30,4 +30,54 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  static_pages:
+    home:
+      title: "Home"
+    help:
+      title: "Help"
+    about:
+      title: "About"
+    contact:
+      title: "Contact"
+  microposts:
+    index:
+      title: "All Microposts"
+
+  home_page:
+    welcome: "Welcome to the Sample App"
+    hello_user: "Hello %{user_name}!" 
+    signup_now: "Sign up now!"
+    home_content_part1: "This is the home page for the"
+    home_content_part2: "sample application."
+
+  help_page:
+    heading: "Help"
+    content_part1: "Get help on the Ruby on Rails Tutorial at the"
+    content_part2: "Rails Tutorial help page."
+    content_part3: "To get help on this sample app, see the"
+    content_part4: "Ruby on Rails Tutorial book."
+
+  about_page:
+    heading: "About"
+    content_part1: "The"
+    content_part2: "part of the"
+    content_part3: "Learn Enough family of tutorials, is a"
+    content_part4: "book and"
+    content_part5: "screencast series"
+    content_part6: "to teach web development with"
+    content_part7: "This is the sample app for the tutorial."
+
+  contact_page:
+    heading: "Contact"
+    content_part1: "Contact the Ruby on Rails Tutorial about the sample app at the"
+    content_part2: "contact page."
+
+  layout:
+    sample_app: "sample app"
+    home: "Home"
+    help: "Help"
+    login: "Log in"
+    about: "About"
+    contact: "Contact"
+    news: "News"
+    footer_by: "by"

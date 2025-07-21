@@ -1,0 +1,19 @@
+<%# provide(:title, t("static_pages.home.title")) %>
+<h1><%= t("home_page.welcome") %> - <%= @app_name %></h1>
+<p>
+    This is the home page for the
+    <a href="https://www.railstutorial.org/">Ruby on Rails Tutorial</a>
+    sample application.
+</p>
+<div class="center jumbotron">
+  <h1><%= t("home_page.welcome") %></h1>
+  <h2>
+    <%= t("home_page.hello_user", user_name: @user_name) %> 
+    <%= t("home_page.home_content_part1") %>
+    <a href="https://www.railstutorial.org/">Ruby on Rails Tutorial</a>
+    <%= t("home_page.home_content_part2") %>
+  </h2>
+  <%= link_to t("home_page.signup_now"), signup_path, class: "btn btn-lg btn-primary" %>
+</div>
+<%= link_to image_tag("rails.svg", alt: "Rails logo", width: "200"),
+            "https://rubyonrails.org/" %>

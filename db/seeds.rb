@@ -5,3 +5,7 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+Micropost.create!(content: "This is the first micropost.")
+Micropost.create!(content: "Here"s another one.")
+Micropost.create!(content: "And a third micropost for testing.")
+    
