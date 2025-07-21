@@ -3,7 +3,8 @@ class SessionsController < ApplicationController
 
   # GET /login
   def new; end
-
+  
+  # POST /login
   def create
     if @user && authenticate_user(@user)
       handle_success(@user)
@@ -12,6 +13,7 @@ class SessionsController < ApplicationController
     end
   end
 
+  #DELETE /logout
   def destroy
     log_out if logged_in?
     flash[:success] = t("flash.logged_out")
@@ -22,11 +24,11 @@ class SessionsController < ApplicationController
     @user = User.find_by(email: params[:session][:email].downcase)
   end
 
-  def authenticate_user user
+  def authenticate_user(user)
     user&.authenticate(params[:session][:password])
   end
 
-  def handle_success user
+  def handle_success(user)
     reset_session
     log_in user
     flash[:success] = t("flash.logged_in")
