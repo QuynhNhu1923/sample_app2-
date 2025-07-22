@@ -1,0 +1,12 @@
+<% provide(:title, t("microposts.index.title")) %>
+<h1><%= t("microposts.index.title") %></h1>
+
+<% if @microposts.any? %>
+    <ul>
+    <% @microposts.each do |micropost| %>
+        <li><%= micropost.content %></li>
+    <% end %>
+    </ul>
+<% else %>
+    <p><%= t("microposts.index.no_microposts") %></p>
+<% end %>
