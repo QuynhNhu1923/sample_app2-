@@ -2,7 +2,11 @@ Rails.application.routes.draw do
   get 'sessions/new'
   scope "(:locale)", locale: /en|vi/ do
     resources :microposts, only: %i(index)
+<<<<<<< HEAD
     resources :users, only: %i(new show)
+=======
+    resources :users, only: %i(new create show destroy)
+>>>>>>> 11aa80d (Completed chapter 8)
 
     root "static_pages#home"
     get "/help", to: "static_pages#help"
