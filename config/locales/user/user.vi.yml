@@ -1,0 +1,8 @@
+vi:
+  user:
+    profile: "Hồ sơ"
+    settings: "Cài đặt"
+    logout: "Đăng xuất"
+    login: "Đăng nhập"
+    signup: "Đăng ký"
+    signup_description: "Đây sẽ là trang đăng ký cho người dùng mới."

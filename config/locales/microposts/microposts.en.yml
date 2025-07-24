@@ -1,0 +1,5 @@
+en:  
+  microposts:
+    index:
+      title: "All Microposts"
+      no_microposts: "No microposts found."

@@ -1,0 +1,4 @@
+vi:
+  flash:
+    logged_in: "Bạn đã đăng nhập thành công."
+    logged_out: "Bạn đã đăng xuất."

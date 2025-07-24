@@ -1,0 +1,4 @@
+en:
+  flash:
+    logged_in: "You have successfully logged in."
+    logged_out: "You have been logged out."

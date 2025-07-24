@@ -1,0 +1,35 @@
+vi:
+  static_pages:
+
+    home:
+      title: "Trang chủ"
+      welcome: "Chào mừng đến với Ứng dụng Mẫu"
+      hello_user: "Xin chào %{user_name}!"
+      signup_now: "Đăng ký ngay!"
+      home_content_part1: "Đây là trang chủ của"
+      home_content_part2: "ứng dụng mẫu."
+
+    help:
+      title: "Trợ giúp"
+      heading: "Trợ giúp"
+      content_part1: "Nhận trợ giúp về Ruby on Rails Tutorial tại"
+      content_part2: "trang trợ giúp Rails Tutorial."
+      content_part3: "Để nhận trợ giúp về ứng dụng mẫu này, hãy xem"
+      content_part4: "sách Ruby on Rails Tutorial."
+
+    about:
+      title: "Giới thiệu"
+      heading: "Giới thiệu"
+      content_part1: ""
+      content_part2: "một phần của"
+      content_part3: "chuỗi hướng dẫn Learn Enough"
+      content_part4: ", là một cuốn sách và"
+      content_part5: "chuỗi video screencast"
+      content_part6: "giúp dạy phát triển web với"
+      content_part7: "Đây là ứng dụng mẫu cho hướng dẫn này."
+
+    contact:
+      title: "Liên hệ"
+      heading: "Liên hệ"
+      content_part1: "Liên hệ với Ruby on Rails Tutorial về ứng dụng mẫu tại"
+      content_part2: "trang liên hệ."
