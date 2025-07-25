@@ -1,3 +1,27 @@
-<% provide(:title, t("user.signup")) %>
-<h1><%= t("user.signup") %></h1>
-<p><%= t("user.signup_description") %></p>
+<% provide(:title, t(".signup")) %>
+<h1><%= t(".signup") %></h1>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for @user, url:signup_path do |f| %>
+      <%= render "shared/error_messages" %>
+      <%= f.label :name %>
+      <%= f.text_field :name, class: "form-control" %>
+
+      <%= f.label :email %>
+      <%= f.email_field :email, class: "form-control" %>
+
+      <%= f.label :birthday %>
+      <%= f.date_select :birthday, start_year: 1900, end_year: Date.current.year, class: "form-control" %>
+
+      <%= f.label :gender %>
+      <%= f.select :gender, Settings.genders.map { |key| [t(".genders.#{key}"), key] }, { selected: Settings.genders.first }, class: "form-control" %>
+      <%= f.label :password %>
+      <%= f.password_field :password, class: "form-control" %>
+
+      <%= f.label :password_confirmation, t(".confirmation") %>
+      <%= f.password_field :password_confirmation, class: "form-control" %>
+
+      <%= f.submit t(".create_account"), class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

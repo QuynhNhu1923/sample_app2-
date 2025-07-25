@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   scope "(:locale)", locale: /en|vi/ do
     resources :microposts, only: %i(index)
+    resources :users, only: %i(new show)
 
     root "static_pages#home"
     get "/help", to: "static_pages#help"
@@ -8,5 +9,7 @@ Rails.application.routes.draw do
     get "/contact", to: "static_pages#contact"
     get "/signup", to: "users#new"
     get "/home", to: "static_pages#home"
+    
+    post "/signup", to: "users#create"
   end
 end

@@ -1,10 +1,13 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+@import 'aside';
+
 $gray-medium-light: #eaeaea;
 $gray-light: #777; 
 $gray: #555; 
 $gray-darker: #222; 
+
 
 /* universal */
 body {
@@ -44,6 +47,7 @@ h2 {
     margin-bottom: 30px;
     text-align: center;
     font-weight: normal;
+
     color: $gray-light; // Sử dụng biến
 }
 
@@ -96,5 +100,52 @@ footer {
             float: left;
             margin-left: 15px;
         }
+    }
+}
+
+.gravatar {
+  float: left;
+  margin-right: 10px;
+}
+
+.gravatar_edit { // Dùng ở Chapter 10
+  margin-top: 15px;
+}
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+}
+
+/* Box-sizing mixin for cross-browser compatibility */
+@mixin box_sizing {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+/* Form styles */
+input, textarea, select, .uneditable-input {
+    border: 1px solid #bbb;
+    width: 100%;
+    margin-bottom: 15px;
+    @include box_sizing;
+}
+
+input {
+    height: auto !important;
+}
+#error_explanation {
+    color: red;
+    ul {
+        color: red;
+        margin: 0 0 30px 0;
+    }
+}
+.field_with_errors {
+    @extend .has-error; // Kế thừa từ Bootstrap
+    .form-control {
+        color: $state-danger-text;
     }
 }

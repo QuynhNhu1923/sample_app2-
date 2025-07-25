@@ -6,6 +6,8 @@ class User < ApplicationRecord
   MIN_PASSWORD_LENGTH = 6
   MAX_BIRTHDAY_YEARS_AGO = 100
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d-]+(\.[a-z\d-]+)*\.[a-z]+\z/i
+  USER_PERMIT = %i(name email password gender birthday).freeze
+  enum gender: {male: 0, female: 1, other: 2}
 
   before_save {self.email = email.downcase}
 
@@ -22,6 +24,8 @@ class User < ApplicationRecord
   # Validate that password is present and has at least
   #                     MIN_PASSWORD_LENGTH characters
   validates :password, presence: true, length: {minimum: MIN_PASSWORD_LENGTH}
+  # Validate that gender is present and included in the list of valid genders
+  validates :gender, presence: true, inclusion: {in: Settings.genders}
   # Validate that birthday is present
   validates :birthday, presence: true
   # Custom validation to ensure birthday is within a valid age range
