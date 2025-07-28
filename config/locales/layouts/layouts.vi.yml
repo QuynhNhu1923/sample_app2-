@@ -7,7 +7,14 @@ vi:
     about: "Giới thiệu"
     contact: "Liên hệ"
     news: "Tin tức"
+    users: "Người dùng"
+    settings: "Cài đặt"
+    signup: "Đăng ký"
+    profile: "Hồ sơ"
+    logout: "Đăng xuất"
     change_language: "Thay đổi ngôn ngữ"
   footer:
     by: "bởi"
     the: "Ứng dụng mẫu"
+  header:
+    acccount: "Tài khoản"

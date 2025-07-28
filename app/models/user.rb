@@ -10,7 +10,7 @@ class User < ApplicationRecord
   enum gender: {male: 0, female: 1, other: 2}
 
   before_save {self.email = email.downcase}
-
+  before_validation :normalize_gender
   # Validate that name is present and does not exceed MAX_NAME_LENGTH
   validates :name, presence: true, length: {maximum: MAX_NAME_LENGTH}
   # Validate that email:
@@ -32,6 +32,14 @@ class User < ApplicationRecord
   #                       (defined in method `birthday_within_range`)
   validate :birthday_within_range
 
+  def self.digest string
+    cost = if ActiveModel::SecurePassword.min_cost
+             BCrypt::Engine::MIN_COST
+           else
+             BCrypt::Engine.cost
+           end
+    BCrypt::Password.create(string, cost:)
+  end
   private
   def birthday_within_range
     return if birthday.blank?
@@ -42,5 +50,10 @@ class User < ApplicationRecord
     return unless birthday < MAX_BIRTHDAY_YEARS_AGO.years.ago.to_date
 
     errors.add(:birthday, :too_old, count: MAX_BIRTHDAY_YEARS_AGO)
+  end
+
+  def normalize_gender
+    self.gender = gender.is_a?(String) ? gender.downcase : gender.to_s.downcase
+    self.gender = nil unless Settings.genders.include?(gender)
   end
 end

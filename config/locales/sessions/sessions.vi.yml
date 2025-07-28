@@ -1,0 +1,13 @@
+vi: 
+  sessions:
+    new:
+      login: "Đăng nhập"
+      subtitle: "Vui lòng nhập thông tin xác thực của bạn để đăng nhập."
+      signup: "Đăng ký ngay!"
+      login: "Đăng nhập"
+    create:
+      success: "Đăng nhập thành công!"
+      failure: "Email hoặc mật khẩu không hợp lệ. Vui lòng thử lại."
+    destroy:
+      success: "Đăng xuất thành công!"
+      failure: "Đã có sự cố xảy ra khi đăng xuất. Vui lòng thử lại."

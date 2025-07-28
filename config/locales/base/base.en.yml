@@ -2,3 +2,6 @@ en:
   flash:
     logged_in: "You have successfully logged in."
     logged_out: "You have been logged out."
+    signup_success: "Welcome to the Sample App! Your account has been created successfully."
+    signup_failure: "There was an error creating your account. Please try again."
+    danger: "Invalid email/password combination"

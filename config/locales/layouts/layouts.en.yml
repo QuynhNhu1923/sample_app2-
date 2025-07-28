@@ -7,7 +7,14 @@ en:
     about: "About"
     contact: "Contact"
     news: "News"
+    users: "Users"
+    settings: "Settings"
+    signup: "Sign up"
+    profile: "Profile"
+    logout: "Log out"
     change_language: "Change Language"
   footer:
     by: "by"
     the: "The sample app"
+  header:
+    account: "Account"
