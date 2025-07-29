@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :logged_in_user, only: [:show]
   before_action :load_user, only: [:show]
 
   # GET /signup
@@ -6,6 +7,7 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
+  # POST /signup
   def show; end
 
   # POST /create
@@ -26,12 +28,12 @@ class UsersController < ApplicationController
   def handle_success _user
     reset_session
     log_in @user
-    flash[:success] = t(".create_success")
+    flash[:success] = t(".new.create_success")
     redirect_to @user
   end
 
   def handle_failure _user
-    flash.now[:error] = t(".create_failed")
+    flash.now[:error] = t(".new.create_failed")
     render :new, status: :unprocessable_entity
   end
 
