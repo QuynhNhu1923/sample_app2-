@@ -9,6 +9,7 @@ en:
     create:
       success: "Successfully logged in!"
       failure: "Invalid email or password. Please try again."
+      logged_in: "You are already logged in."
     destroy:
       success: "Successfully logged out!"
       failure: "There was an issue logging you out. Please try again."

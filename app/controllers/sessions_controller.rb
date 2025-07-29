@@ -34,15 +34,17 @@ class SessionsController < ApplicationController
   def redirect_if_logged_in
     return unless logged_in?
 
-    flash[:info] = "You are already logged in."
+    flash[:info] = t(".logged_in")
     redirect_to current_user
   end
 
   def handle_success user
+    forwarding_url = session[:forwarding_url]
     reset_session
     log_in user
+    params[:session][:remember_me] == "1" ? remember(user) : forget(user)
     flash[:success] = t("flash.logged_in")
-    redirect_to user
+    redirect_to forwarding_url || user
   end
 
   def handle_failure
