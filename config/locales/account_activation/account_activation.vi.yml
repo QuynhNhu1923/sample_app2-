@@ -1,0 +1,7 @@
+vi:
+  activation:
+    account_activation: "Kích hoạt tài khoản Ứng dụng Mẫu"
+    welcome_message: "Chào mừng bạn đến với Ứng dụng Mẫu! Nhấp vào liên kết bên dưới để kích hoạt tài khoản của bạn:"
+    activate: "Kích hoạt"
+    hi: "Chào %{name},"
+    account_not_activated: "Tài khoản chưa được kích hoạt. Vui lòng kiểm tra email của bạn để biết liên kết kích hoạt."

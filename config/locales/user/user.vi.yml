@@ -17,6 +17,7 @@ vi:
       create_success: "Tạo thành công - Chào mừng bạn đến với Ứng dụng Mẫu"
       create_failed: "Tạo tài khoản không thành công."
       log_error: "Lỗi người dùng:"
+      check_email: "Vui lòng kiểm tra email của bạn để nhận liên kết kích hoạt tài khoản."
     error:
       not_found: "Không tìm thấy người dùng"
       not_correct_user: "Bạn không thể chỉnh sửa tài khoản này."

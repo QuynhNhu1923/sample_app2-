@@ -1,9 +1,8 @@
 class UsersController < ApplicationController
   before_action :logged_in_user, except: [:new, :create]
-  before_action :load_user, only: [:show, :edit, :update, :destroy] 
+  before_action :load_user, only: [:show, :edit, :update, :destroy]
   before_action :correct_user, only: [:edit, :update, :show]
   before_action :admin_user, only: [:index, :destroy]
-
 
   def index
     @pagy, @users = pagy(User.order(:name), items: Settings.items_per_page)
@@ -36,7 +35,7 @@ class UsersController < ApplicationController
   end
 
   def update
-   # @user = User.find_by(id: params[:id])
+    # @user = User.find_by(id: params[:id])
     if @user.update(user_params)
       flash[:success] = t(".edit.update_success")
       redirect_to @user
@@ -78,17 +77,20 @@ class UsersController < ApplicationController
 
     flash[:error] = t(".error.not_correct_user")
     redirect_to root_url
-  end 
+  end
 
   def admin_user
     redirect_to(root_url, status: :see_other) unless current_user.admin?
   end
 
   def handle_success _user
-    reset_session
-    log_in @user
-    flash[:success] = t(".new.create_success")
-    redirect_to @user
+    # reset_session
+    # log_in @user
+    # flash[:success] = t(".new.create_success")
+    # redirect_to @user
+    @user.send_activation_email
+    flash[:info] = t(".new.check_email")
+    redirect_to root_path, status: :see_other
   end
 
   def handle_failure _user

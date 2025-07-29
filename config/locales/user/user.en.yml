@@ -17,6 +17,7 @@ en:
       create_success: "Created successfully - Welcome to the Sample App"
       create_failed: "Failed to create your account."
       log_error: "User errors:"
+      check_email: "Please check your email for account activation link."
     error:
       not_found: "Not found user!"
       not_correct_user: "You cannot edit this account."

@@ -1,0 +1,7 @@
+en:
+  activation:
+    account_activation: "Sample App Account Activation"
+    welcome_message: "Welcome to the Sample App! Click on the link below to activate your account:"
+    activate: "Activate"
+    hi: "Hi %{name},"
+    account_not_activated: "Account not activated. Check your email for the activation link."

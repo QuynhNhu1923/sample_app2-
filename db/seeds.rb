@@ -16,7 +16,7 @@ User.create!(name:  "Example User",
                 gender:   "male",
                 password:              "foobar",
                 password_confirmation: "foobar",
-                admin: true) #  Đặt người dùng đầu tiên làm admin
+                admin: true, activated: true, activated_at: Time.zone.now) #  Đặt người dùng đầu tiên làm admin
 # Generate a bunch of additional users.
 30.times do |n|
     name  = Faker::Name.name
@@ -27,5 +27,6 @@ User.create!(name:  "Example User",
                 birthday: "1990-01-01",
                 gender:   "male",
                 password:              password,
-                password_confirmation: password)
+                password_confirmation: password,
+                activated: true, activated_at: Time.zone.now)
 end
