@@ -34,7 +34,7 @@ class SessionsController < ApplicationController
   def redirect_if_logged_in
     return unless logged_in?
 
-    flash[:info] = t(".logged_in")
+    flash[:info] = t("flash.logged_in")
     redirect_to current_user
   end
 

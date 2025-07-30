@@ -3,6 +3,7 @@ Rails.application.routes.draw do
     resources :microposts, only: %i(index)
     resources :users, only: %i(index new show create edit update destroy)
     resources :account_activations, only: [:edit]
+    resources :password_resets, only: %i(new create edit update)
 
     root "static_pages#home"
     get "/help", to: "static_pages#help"
