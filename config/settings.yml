@@ -20,10 +20,12 @@ learn_enough_url: "https://www.learnenough.com/"
 rails_screencast_url: "https://screencasts.railstutorial.org/"
 base_avatar_url: "https://www.gravatar.com/avatar"
 gravatar_base_url: "https://secure.gravatar.com/avatar"
+gravatar_email_url: "http://gravatar.com/emails"
 genders:
   - male
   - female
   - other
+items_per_page: 10
 
 development:
 <<: *defaults

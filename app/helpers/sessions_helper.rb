@@ -23,7 +23,14 @@ module SessionsHelper
     return unless user&.authenticated?(cookies[:remember_token])
 
     log_in user
-    user
+  end
+
+  def current_user? user
+    user && user == current_user
+  end
+
+  def store_location
+    session[:forwarding_url] = request.original_url if request.get?
   end
 
   # Returns true if the user is logged in, false otherwise.
