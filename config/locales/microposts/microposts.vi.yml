@@ -1,5 +1,19 @@
-vi:
+vi:  
   microposts:
     index:
       title: "Tất cả bài đăng"
       no_microposts: "Không tìm thấy bài đăng nào."
+    timestamp: "Đăng lúc %{time} trước"
+    destroy:
+      title: "Xóa"
+      confirm: "Bạn có chắc chắn muốn xóa bài đăng này không?"
+      success: "Đã xóa bài đăng."
+      failure: "Xóa bài đăng không thành công."
+    create:
+      success: "Đã tạo bài đăng."
+      failure: "Tạo bài đăng không thành công."
+    correct_user:
+      not_found: "Bài đăng không hợp lệ hoặc không tìm thấy"
+    image:
+      size: "Kích thước hình ảnh phải nhỏ hơn 5MB"
+      format: "Hình ảnh phải có định dạng hợp lệ (JPEG, GIF, PNG)"

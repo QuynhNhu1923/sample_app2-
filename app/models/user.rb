@@ -5,6 +5,7 @@ class User < ApplicationRecord
   before_create :create_activation_digest
 
   has_secure_password
+  has_many :microposts, dependent: :destroy
 
   MAX_NAME_LENGTH = 50
   MAX_EMAIL_LENGTH = 255
@@ -37,6 +38,10 @@ allow_nil: true
   # Custom validation to ensure birthday is within a valid age range
   #                       (defined in method `birthday_within_range`)
   validate :birthday_within_range
+
+  def feed
+    Micropost.where("user_id = ?", id)
+  end
 
   def self.digest string
     cost = if ActiveModel::SecurePassword.min_cost

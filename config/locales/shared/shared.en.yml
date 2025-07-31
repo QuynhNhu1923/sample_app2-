@@ -1,4 +1,12 @@
 en:
   shared:
     error_messages:
-      error_count_message: "The form contains %{count} errors."
+      error_count_message: "The form contains %{errors_pluralized}."
+      error: "errors"
+    user_info:
+      view_profile: "View my profile"
+      microposts: "microposts"
+    micropost_form:
+      compose_placeholder: "Compose new micropost..."
+      image_accepted_formats: "Accepted formats: JPEG, GIF, PNG"
+      post_button: "Post"

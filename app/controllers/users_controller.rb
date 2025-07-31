@@ -14,7 +14,9 @@ class UsersController < ApplicationController
   end
 
   # POST /signup
-  def show; end
+  def show
+    @page, @microposts = pagy(@user.microposts, items: Settings.items_per_page)
+  end
 
   # POST /create
   def create
@@ -59,13 +61,13 @@ class UsersController < ApplicationController
     params.require(:user).permit(User::USER_PERMIT)
   end
 
-  def logged_in_user
-    return if logged_in?
+  # def logged_in_user
+  #   return if logged_in?
 
-    store_location
-    flash[:danger] = t(".error.please_login")
-    redirect_to login_url, status: :see_other
-  end
+  #   store_location
+  #   flash[:danger] = t(".error.please_login")
+  #   redirect_to login_url, status: :see_other
+  # end
 
   # def correct_user
   #   @user = User.find_by(id: params[:id])

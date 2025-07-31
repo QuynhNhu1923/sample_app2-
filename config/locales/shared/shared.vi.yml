@@ -1,4 +1,5 @@
 vi:
   shared:
     error_messages:
-      error_count_message: "Biểu mẫu chứa %{count} lỗi."
+      error_count_message: "Biểu mẫu chứa %{errors_pluralized}"
+      error: "lỗi"

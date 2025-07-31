@@ -3,3 +3,17 @@ en:
     index:
       title: "All Microposts"
       no_microposts: "No microposts found."
+    timestamp: "Posted at %{time} ago"
+    destroy:
+      title: "Delete"
+      confirm: "Are you sure you want to delete this micropost?"
+      success: "Micropost deleted successfully."
+      failure: "Failed to delete micropost."
+    create:
+      success: "Micropost created successfully."
+      failure: "Failed to create micropost."
+    correct_user:
+      not_found: "Micropost invalid or not found"
+    image:
+      size: "Image size must be less than 5MB"
+      format: "Image must be a valid format (JPEG, GIF, PNG)"

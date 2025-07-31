@@ -5,15 +5,31 @@
     <%= link_to Settings.rails_tutorial_text, Settings.rails_tutorial_url %>
     <%= t(".home_content_part2") %>
 </p>
-<div class="center jumbotron">
-  <h1><%= t(".welcome") %></h1>
-  <h2>
-    <%= t(".hello_user", user_name: Settings.user_name) %>
-    <%= t(".home_content_part1") %>
-    <%= link_to Settings.rails_tutorial_text, Settings.rails_tutorial_url %>
-    <%= t(".home_content_part2") %>
-  </h2>
-  <%= link_to t(".signup_now"), signup_path, class: "btn btn-lg btn-primary" %>
-</div>
-<%= link_to image_tag("rails.svg", alt: Settings.rails_logo_alt, width: Settings.rails_logo_width),
-            Settings.rails_official_url %>
+<% if logged_in? %>
+  <div class="row">
+    <aside class="col-md-4">
+      <section class="user_info">
+        <%= render 'shared/user_info' %>
+      </section>
+      <section class="micropost_form">
+        <%= render 'shared/micropost_form' %>
+      </section>
+    </aside>
+    <div class="col-md-8">
+      <h3>Micropost Feed</h3>
+      <%= render 'shared/feed' %>
+  </div>
+<% else %>
+  <div class="center jumbotron">
+    <h1><%= t(".welcome") %></h1>
+    <h2>
+      <%= t(".hello_user", user_name: Settings.user_name) %>
+      <%= t(".home_content_part1") %>
+      <%= link_to Settings.rails_tutorial_text, Settings.rails_tutorial_url %>
+      <%= t(".home_content_part2") %>
+    </h2>
+    <%= link_to t(".signup_now"), signup_path, class: "btn btn-lg btn-primary" %>
+  </div>
+  <%= link_to image_tag("rails.svg", alt: Settings.rails_logo_alt, width: Settings.rails_logo_width),
+               Settings.rails_official_url %>
+<% end %>
