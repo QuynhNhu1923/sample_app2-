@@ -3,3 +3,14 @@ vi:
     error_messages:
       error_count_message: "Biểu mẫu chứa %{errors_pluralized}"
       error: "lỗi"
+    user_info:
+      view_profile: "Xem hồ sơ của tôi"
+      microposts: "microposts"
+    micropost_form:
+      compose_placeholder: "Soạn thảo micropost mới..."
+      image_accepted_formats: "Định dạng được chấp nhận: JPEG, GIF, PNG"
+      post_button: "Đăng"
+    stats:
+      followers: "Người theo dõi"
+      following: "Đang theo dõi"
+      microposts: "Microposts"

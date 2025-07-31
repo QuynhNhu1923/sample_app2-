@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
   scope "(:locale)", locale: /en|vi/ do
     resources :microposts, except: %i(index new edit show update)
-    resources :users, only: %i(index new show create edit update destroy)
+    resources :users, only: %i(index new show create edit update destroy) do
+      member do
+        get :following, :followers
+      end
+    end
+    resources :relationships, only: %i(create destroy)
     resources :account_activations, only: [:edit]
     resources :password_resets, only: %i(new create edit update)
 

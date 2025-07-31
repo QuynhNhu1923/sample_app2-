@@ -24,4 +24,40 @@ vi:
       please_login: "Vui lòng đăng nhập."
     confirm_password: "Xác nhận mật khẩu"
     signup_description: "Đây là trang đăng ký cho người dùng mới."
-
+    delete:
+      title: "Xóa"
+      confirm: "Bạn có chắc chắn không?"
+      success: "Xóa người dùng thành công."
+      failed: "Xóa người dùng không thành công."
+    edit:
+      title_edit: "Chỉnh sửa người dùng"
+      title_update: "Cập nhật hồ sơ của bạn"
+      update_success: "Cập nhật người dùng thành công."
+      update_failed: "Cập nhật người dùng không thành công."
+      update_button: "Lưu thay đổi"
+      gravatar_change: "Thay đổi Gravatar"
+    destroy:
+      title: "Xóa người dùng"
+      confirm: "Bạn có chắc chắn muốn xóa người dùng này không?"
+      success: "Xóa người dùng thành công."
+      failed: "Xóa người dùng không thành công."
+    index:
+      title: "Tất cả người dùng"
+      empty: "Không tìm thấy người dùng."
+    following:
+      title: "Đang theo dõi"
+      empty: "Bạn không đang theo dõi ai."
+    followers:
+      title: "Người theo dõi"
+      empty: "Bạn không có người theo dõi."
+    user:
+      following: "Đang theo dõi"
+      followers: "Người theo dõi"
+      unfollow: "Bỏ theo dõi"
+      follow: "Theo dõi"
+      follow_button: "Theo dõi người dùng này"
+      unfollow_button: "Bỏ theo dõi người dùng này"
+      follow_success: "Bạn đang theo dõi người dùng này."
+      unfollow_success: "Bạn đã bỏ theo dõi người dùng này."
+      follow_failed: "Theo dõi người dùng này không thành công."
+      unfollow_failed: "Bỏ theo dõi người dùng này không thành công."

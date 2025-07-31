@@ -10,3 +10,7 @@ en:
       compose_placeholder: "Compose new micropost..."
       image_accepted_formats: "Accepted formats: JPEG, GIF, PNG"
       post_button: "Post"
+    stats:
+      followers: "Followers"
+      following: "Following"
+      microposts: "Microposts"

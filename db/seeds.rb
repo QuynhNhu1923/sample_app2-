@@ -33,3 +33,11 @@ User.create!(name:  "Example User",
     # Create a micropost for each user
     user.microposts.create!(content: "This is a micropost for #{name}.")
 end
+
+users = User.all
+user = users.first
+following = users[2..20]
+followers = users[3..15]
+
+following.each { |followed| user.follow(followed) }
+followers.each { |follower| follower.follow(user) }

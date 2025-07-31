@@ -44,3 +44,20 @@ en:
     index:
       title: "All users"
       empty: "No users found."
+    following:
+      title: "Following"
+      empty: "You are not following anyone."
+    followers:
+      title: "Followers"
+      empty: "You have no followers."
+  user:
+    following: "Following"
+    followers: "Followers"
+    unfollow: "Unfollow"
+    follow: "Follow"
+    follow_button: "Follow this user"
+    unfollow_button: "Unfollow this user"
+    follow_success: "You are now following this user."
+    unfollow_success: "You have unfollowed this user."
+    follow_failed: "Failed to follow this user."
+    unfollow_failed: "Failed to unfollow this user."
